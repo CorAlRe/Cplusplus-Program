@@ -9,10 +9,11 @@ You are doing a fantastic job at Chada Tech in your new role as a junior develop
 
 The Corner Grocer needs a program that analyzes the text records they generate throughout the day. These records list items purchased in chronological order from the time the store opens to the time it closes. They are interested in rearranging their produce section and need to know how often items are purchased so they can create the most effective layout for their customers. The program that the Corner Grocer is asking you to create should address the following three requirements for a given text-based input file that contains a list of purchased items for a single day:
 
-1. Produce a list of all items purchased in a given day along with the number of times each item was purchased.
-1. Produce a number representing how many times a specific item was purchased in a given day.
-1. Produce a text-based histogram listing all items purchased in a given day, along with a representation of the number of times each item was purchased.
+* Produce a list of all items purchased in a given day along with the number of times each item was purchased.
+* Produce a number representing how many times a specific item was purchased in a given day.
+* Produce a text-based histogram listing all items purchased in a given day, along with a representation of the number of times each item was purchased.
 
+## Requirements
 1. Use C++ to develop a menu display that asks users what they would like to do. Include options for each of the three requirements outlined in the scenario and number them 1, 2, and 3. You should also include an option 4 to exit the program. All of your code needs to effectively validate user input.
 
 1. Create code to determine the number of times each individual item appears. Here you will be addressing the first requirement from the scenario to produce a list of all items purchased in a given day along with the number of times each item was purchased. Note that each grocery item is represented by a word in the input file. Reference the following to help guide how you can break down the coding work.
