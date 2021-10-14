@@ -1,17 +1,17 @@
 # Cplusplus-Program
-##Competency
+## Competency
 
 Utilize various programming languages to develop secure, efficient code
 
-##Scenario
+## Scenario
 
 You are doing a fantastic job at Chada Tech in your new role as a junior developer, and you exceeded expectations in your last assignment for Airgead Banking. Since your team is impressed with your work, they have given you another, more complex assignment. Some of the code for this project has already been completed by a senior developer on your team. Because this work will require you to use both C++ and Python, the senior developer has given you the code to begin linking between C++ and Python. Your task is to build an item-tracking program for the Corner Grocer, which should incorporate all of their requested functionality.
 
 The Corner Grocer needs a program that analyzes the text records they generate throughout the day. These records list items purchased in chronological order from the time the store opens to the time it closes. They are interested in rearranging their produce section and need to know how often items are purchased so they can create the most effective layout for their customers. The program that the Corner Grocer is asking you to create should address the following three requirements for a given text-based input file that contains a list of purchased items for a single day:
 
-    1. Produce a list of all items purchased in a given day along with the number of times each item was purchased.
-    1. Produce a number representing how many times a specific item was purchased in a given day.
-    1. Produce a text-based histogram listing all items purchased in a given day, along with a representation of the number of times each item was purchased.
+1. Produce a list of all items purchased in a given day along with the number of times each item was purchased.
+1. Produce a number representing how many times a specific item was purchased in a given day.
+1. Produce a text-based histogram listing all items purchased in a given day, along with a representation of the number of times each item was purchased.
 
 1. Use C++ to develop a menu display that asks users what they would like to do. Include options for each of the three requirements outlined in the scenario and number them 1, 2, and 3. You should also include an option 4 to exit the program. All of your code needs to effectively validate user input.
 
@@ -35,6 +35,7 @@ The Corner Grocer needs a program that analyzes the text records they generate t
         Potatoes ****
         Pumpkins *****
         Onions ***
+
 1. Apply industry standard best practices such as in-line comments and appropriate naming conventions to enhance readability and maintainability. Remember that you must demonstrate industry standard best practices in all your code to ensure clarity, consistency, and efficiency. This includes the following:
     1. Using input validation and error handling to anticipate, detect, and respond to run-time and user errors (for example, make sure you have option 4 on your menu so users can exit the program)
     1. Inserting in-line comments to denote your changes and briefly describe the functionality of the code
