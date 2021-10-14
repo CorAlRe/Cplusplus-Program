@@ -193,6 +193,7 @@ void handleOption(char option, istream& inStream, ostream& outStream) {
 	switch (option) {
 	case '1': 
 		outStream << "Option 1 selected. " << endl;
+		CallProcedure("FrequencyOfItems");
 		break;
 	case '2': 
 		outStream << "Option 2 selected." << endl;

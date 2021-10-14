@@ -162,6 +162,7 @@
     </None>
     <None Include="PythonCode.py">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <FileType>Script</FileType>
     </None>
     <None Include="README.md" />
   </ItemGroup>
