@@ -1,20 +1,6 @@
 import re
 import string
 
-
-def printsomething():
-    print("Hello from python!")
-
-
-def PrintMe(v):
-    print("You sent me: " + v)
-    return 100;
-
-
-def SquareValue(v):
-    return v * v
-
-
 def countWordFrequency(file):
     itemFreq = {}
 
@@ -26,23 +12,43 @@ def countWordFrequency(file):
 
     return itemFreq
 
-
 def getFrequencyDictionary():
-    file = open('InputFile.txt')
-    frequencies = countWordFrequency(file)
-    file.close()
+    with open('InputFile.txt') as file: # read from file
+        frequencies = countWordFrequency(file)
+
     return frequencies;
 
+def saveFrequencyDictionary(frequencies):
+    with open('Frequency.dat', 'w') as file: # overwrite file
+        for item, frequency in frequencies.items():
+            file.write(item)
+            file.write(' ')
+            file.write('{}'.format(frequency))
+            file.write('\n');
+
+def sortDictionary(dictionary):
+    returnDict = {}
+
+    for key in sorted(dictionary):
+        returnDict[key] = dictionary[key]
+
+    return returnDict;
 
 def FrequencyOfItems():
-    frequencies = getFrequencyDictionary();
+    frequencies = getFrequencyDictionary()
 
-    words = sorted(frequencies.keys())
+    words = sortDictionary(frequencies)
     format_string = '{keyword:15} {freq:5}'
     print(format_string.format(keyword='Item', freq='Frequency'))
+
     for word in words:
         print(format_string.format(keyword=word, freq=frequencies[word]))
 
 def LookupItemFrequency(item):
-    frequencies = getFrequencyDictionary();
-    return frequencies.get(item, -1)
+    frequencies = getFrequencyDictionary()
+    return frequencies.get(item, -1) # if not found return -1
+
+def ExportFrequencyData():
+    frequencies = getFrequencyDictionary()
+    frequencies = sortDictionary(frequencies)
+    saveFrequencyDictionary(frequencies)

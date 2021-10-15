@@ -162,10 +162,10 @@
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
       <DeploymentContent>true</DeploymentContent>
     </None>
-    <None Include="PythonCode.py">
+    <CopyFileToFolders Include="PythonCode.py">
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
       <FileType>Script</FileType>
-    </None>
+    </CopyFileToFolders>
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>

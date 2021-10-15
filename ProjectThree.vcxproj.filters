@@ -31,9 +31,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="PythonCode.py">
-      <Filter>Resource Files</Filter>
-    </None>
     <None Include="..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\python3.dll">
       <Filter>Resource Files</Filter>
     </None>
@@ -54,5 +51,10 @@
     <ClInclude Include="python.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="PythonCode.py">
+      <Filter>Resource Files</Filter>
+    </CopyFileToFolders>
   </ItemGroup>
 </Project>
