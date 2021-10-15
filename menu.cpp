@@ -19,7 +19,6 @@ void printMenu(ostream& outStream) {
 	outStream << "Enter your selection as a number 1, 2, 3, or 4." << endl;
 }
 
-
 /// <summary>
 /// Execute the option associated with the menu options
 /// </summary>
@@ -29,11 +28,17 @@ void printMenu(ostream& outStream) {
 void handleOption(char option, istream& inStream, ostream& outStream) {
 	switch (option) {
 	case '1':
-		outStream << "Option 1 selected. " << endl;
+		outStream << endl;
 		CallProcedure("FrequencyOfItems");
 		break;
 	case '2':
-		outStream << "Option 2 selected." << endl;
+		outStream << endl;
+		outStream << "Please enter item to lookup:" << endl;
+		{
+			string input = getWord(inStream);
+			int frequency = callIntFunc("LookupItemFrequency", input);
+			displayFrequency(input, frequency, outStream);
+		}
 		break;
 	case '3':
 		outStream << "Option 3 selected." << endl;
@@ -46,4 +51,29 @@ void handleOption(char option, istream& inStream, ostream& outStream) {
 		break;
 	}
 	outStream << endl;
+}
+
+string getWord(istream& inStream) {
+	string input;
+	getline(inStream, input);
+
+	if (input.length() > 0) {
+		auto noNewLine = std::remove(input.begin(), input.end(), '\n');
+		input.erase(noNewLine, input.end());
+		return input;
+	}
+	else {
+		return "";
+	}
+}
+
+void displayFrequency(string item, int frequency, ostream& outStream) {
+	outStream << endl;
+
+	if (frequency == -1) {
+		outStream << "Item not found: " << item << endl;
+		return;
+	}
+
+	outStream << "The number of " << item << " sold today is " << frequency << "." << endl;
 }

@@ -27,10 +27,15 @@ def countWordFrequency(file):
     return itemFreq
 
 
-def FrequencyOfItems():
+def getFrequencyDictionary():
     file = open('InputFile.txt')
     frequencies = countWordFrequency(file)
     file.close()
+    return frequencies;
+
+
+def FrequencyOfItems():
+    frequencies = getFrequencyDictionary();
 
     words = sorted(frequencies.keys())
     format_string = '{keyword:15} {freq:5}'
@@ -38,3 +43,6 @@ def FrequencyOfItems():
     for word in words:
         print(format_string.format(keyword=word, freq=frequencies[word]))
 
+def LookupItemFrequency(item):
+    frequencies = getFrequencyDictionary();
+    return frequencies.get(item, -1)
