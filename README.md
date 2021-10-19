@@ -3,24 +3,30 @@
 ## Reflection
 
 * Summarize the project and what problem it was solving.
+
 The project was to demonstrate using C++ and Python together in a project.
 
 * What did you do particularly well?
+
 I think I put in sufficient error handling to handle bad input and keep the program menu loop going until the user exits normally.
 
 * Where could you enhance your code? How would these improvements make your code more efficient, secure, and so on?
+
 The item search option requires the user to match exact using a case-sensitive search. I would rework it to allow to match the first partial match regardless of case.
 
 * Which pieces of the code did you find most challenging to write, and how did you overcome this? What tools or resources are you adding to your support network?
+
 The number one problem with writing code in different languages is trying to remember what libraries/modules to use, the names of functions, and syntax to use for keywords.
 I found myself using cplusplus.com, python.org and stackoverflow.com as resources to find what I need.
 
 * What skills from this project will be particularly transferable to other projects or course work?
+
 I think, the C++ project setup in Visual Studio would be the most transferrable. 
 Console applications aren't that prevalent anymore, so ASCII menus aren't much of a transferrable skill.
 Also, I'm not sure when I might use Python in a C++ again, business applications don't need it.
 
 * How did you make this program maintainable, readable, and adaptable?
+
 I used program comments, consistent naming conventions, and syntax formatting to make the program readable. 
 I organized the code into files to make it maintainable.
 I changed the way the Python libraries were included in the Project to make it adaptable to other build environments. For instance, GitHub 
